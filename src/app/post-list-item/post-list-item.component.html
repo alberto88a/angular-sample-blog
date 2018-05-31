@@ -5,6 +5,9 @@
   <div class ="topright">{{ created_at | date: 'dd/MM/yyyy, hh:mm a' }}</div>
   <h3> {{ title }} </h3>
   <p> {{ content }} </p>
-  <button class="btn btn-success" (click)="addLike()">Love it!</button>
-  <button class="btn btn-danger" (click)="removeLike()">Don't love it!</button>
+  <button class="btn btn-success" (click)="onLike()">Love it!</button>
+  <button class="btn btn-danger" (click)="onUnlike()">Don't love it!</button>
+  <button class="btn btn-default pull-right" (click)="onDeletePost(post)">
+  	<span class="glyphicon glyphicon-minus"></span>
+  </button>
 </li>

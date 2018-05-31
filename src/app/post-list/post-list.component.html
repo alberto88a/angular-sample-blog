@@ -5,10 +5,16 @@
       <ul class="list-group">
         <ul class="list-group">
           <app-post-list-item  *ngFor="let post of postList"
+                       [id]="post.id"
                        [title]="post.title"
-                       [content]="post.content"></app-post-list-item>
+                       [content]="post.content"
+                       [loveIts]="post.loveIts"></app-post-list-item>
         </ul>
       </ul>
+      <button class="btn btn-primary"
+        (click)="onSave()">Enregistrer les posts</button>
+      <button class="btn btn-primary"
+        (click)="onFetch()">Récupérer les posts</button>
     </div>
   </div>
 </div>
