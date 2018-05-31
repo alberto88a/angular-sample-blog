@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-  	<h3> Nouveau Post </h3>
+  	<h2> Nouveau Post </h2>
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       	<div class="form-group">
 		    <label for="title">
@@ -12,7 +12,7 @@
 		    <label for="content">
 		      Contenu
 		    </label>
-		    <input type="text" id="content" class="form-control" name="content" ngModel required>
+		    <textarea type="text" id="content" class="form-control"  name="content" ngModel required></textarea>
 		</div>
       <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Enregistrer</button>
     </form>
